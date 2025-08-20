@@ -31,16 +31,31 @@
 //     },
 //   },
 // })
+// import { defineConfig } from 'vite'
+// import react from '@vitejs/plugin-react'
+// import tailwindcss from '@tailwindcss/vite'
+
+// export default defineConfig({
+//   plugins: [react(), tailwindcss()],
+//   base: '/expense-tracker/',           // <-- your repo name for GitHub Pages
+//   resolve: {
+//     alias: {
+//       '@': '/src',                     // <-- no __dirname, no path, no errors
+//     },
+//   },
+// })
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import path from 'path'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/expense-tracker/',           // <-- your repo name for GitHub Pages
+  base: "/expense-tracker/",   // this must match your repo name!
   resolve: {
     alias: {
-      '@': '/src',                     // <-- no __dirname, no path, no errors
-    },
-  },
+      '@': path.resolve(__dirname, 'src')
+    }
+  }
 })
