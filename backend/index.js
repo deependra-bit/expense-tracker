@@ -17,8 +17,8 @@ import  expenseRouter from "./routes/expense.route.js"
  app.use(cookieParser());
  
 const corsOptions = {
-  origin:[ "http://localhost:5173", 
-  "expense-tracker-fa7x7r82h-deependra-bits-projects.vercel.app"],  // ✅ must match exactly
+  origin: "http://localhost:5173", 
+  // "expense-tracker-fa7x7r82h-deependra-bits-projects.vercel.app"],  // ✅ must match exactly
   credentials: true                  // ✅ lowercase 'credentials'
 }
 
